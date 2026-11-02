@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4338ca">
+
+    <title>Math Genius AI - All Maths Solver</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scientific Calculator -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@13.2.0/lib/browser/math.js"></script>
+
+    <!-- Photo Question Scanner -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+    <!-- JavaScript -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">🧮 Math Genius AI</div>
+    <span>All Classes • All Topics</span>
+</header>
+
+<section class="hero">
+    <h1>Maths Made Easy!</h1>
+    <p>Solve Every Maths Question Step by Step</p>
+    <p>Hindi + English Explanation</p>
+</section>
+
+<main class="container">
+
+    <!-- MATH SOLVER -->
+
+    <section class="card">
+
+        <h2>✨ AI Math Solver</h2>
+
+        <label>Select Chapter</label>
+
+        <select id="chapter">
+            <option value="All Chapters">All Chapters</option>
+            <option>Rational Numbers</option>
+            <option>Exponents</option>
+            <option>Square and Square Roots</option>
+            <option>Cubes and Cube Roots</option>
+            <option>Algebraic Expressions and Identities</option>
+            <option>Factorization</option>
+            <option>Linear Equations in One Variable</option>
+            <option>Percentage and Its Applications</option>
+            <option>Compound Interest</option>
+            <option>Direct and Inverse Variation</option>
+            <option>Understanding Quadrilaterals</option>
+            <option>Construction</option>
+            <option>Area of Polygons</option>
+            <option>Visualising Solid Shapes</option>
+            <option>Mensuration of 3-D Figures</option>
+            <option>Data Handling</option>
+            <option>Construction of Pie Diagrams</option>
+            <option>Concept of Probability</option>
+            <option>Cartesian System and Line Graph</option>
+            <option>Other Mathematics</option>
+        </select>
+
+        <label>Select Class</label>
+
+        <select id="grade">
+            <option>All Classes</option>
+            <option>Class 1-5</option>
+            <option>Class 6-8</option>
+            <option>Class 9-10</option>
+            <option>Class 11-12</option>
+            <option>College</option>
+        </select>
+
+        <label>Explanation Language</label>
+
+        <select id="language">
+            <option value="hi">Hindi</option>
+            <option value="en">English</option>
+            <option value="both">Hindi + English</option>
+        </select>
+
+        <label>Enter Your Maths Question</label>
+
+        <textarea id="question" rows="5"
+            placeholder="Example: Every integer is a rational number. Prove it."></textarea>
+
+        <div class="button-group">
+
+            <button id="solveBtn" class="primary">
+                ✨ Solve Question
+            </button>
+
+            <button id="voiceBtn" class="secondary">
+                🎤 Voice Question
+            </button>
+
+            <label class="upload secondary">
+                📷 Upload Photo
+                <input type="file" id="photoInput"
+                    accept="image/*">
+            </label>
+
+        </div>
+
+        <p id="status"></p>
+
+        <div id="answer" class="answer">
+            Your solution will appear here.
+        </div>
+
+    </section>
+
+    <!-- SCIENTIFIC CALCULATOR -->
+
+    <section class="card">
+
+        <h2>🔢 Scientific Calculator</h2>
+
+        <input id="calcInput"
+            type="text"
+            placeholder="Enter calculation">
+
+        <div class="calculator">
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-value="/">÷</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button data-value="*">×</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button data-value="-">−</button>
+
+            <button data-value="0">0</button>
+            <button data-value=".">.</button>
+            <button data-value="(">(</button>
+            <button data-value=")">)</button>
+
+            <button data-value="sqrt(">√</button>
+            <button data-value="sin(">sin</button>
+            <button data-value="cos(">cos</button>
+            <button data-value="tan(">tan</button>
+
+            <button data-value="pi">π</button>
+            <button data-value="^">^</button>
+            <button data-value="+">+</button>
+            <button id="clearCalc">AC</button>
+
+        </div>
+
+        <button id="calculateBtn" class="primary">
+            Calculate
+        </button>
+
+        <h3 id="calcAnswer"></h3>
+
+    </section>
+
+    <!-- ALL CHAPTERS -->
+
+    <section class="card">
+
+        <h2>📚 All 19 Maths Chapters</h2>
+
+        <ol>
+            <li>Rational Numbers</li>
+            <li>Exponents</li>
+            <li>Square and Square Roots</li>
+            <li>Cubes and Cube Roots</li>
+            <li>Algebraic Expressions and Identities</li>
+            <li>Factorization</li>
+            <li>Linear Equations in One Variable</li>
+            <li>Percentage and Its Applications</li>
+            <li>Compound Interest</li>
+            <li>Direct and Inverse Variation</li>
+            <li>Understanding Quadrilaterals</li>
+            <li>Construction</li>
+            <li>Area of Polygons</li>
+            <li>Visualising Solid Shapes</li>
+            <li>Mensuration of 3-D Figures</li>
+            <li>Data Handling</li>
+            <li>Construction of Pie Diagrams</li>
+            <li>Concept of Probability</li>
+            <li>Cartesian System and Line Graph</li>
+        </ol>
+
+    </section>
+
+</main>
+
+<footer>
+    <h3>🧮 Math Genius AI</h3>
+    <p>Learn • Solve • Understand</p>
+    <p>© 2026 Math Genius AI</p>
+</footer>
+
+</body>
+              </html>
+              
